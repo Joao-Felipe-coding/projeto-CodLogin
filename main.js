@@ -10,3 +10,6 @@ function acessar() {
     window.location.href = "cadastro.html";
   }
 }
+
+//cria variável do tipo array
+var dadosLista = [];
