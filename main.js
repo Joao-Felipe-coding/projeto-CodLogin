@@ -13,3 +13,12 @@ function acessar() {
 
 //cria variável do tipo array
 var dadosLista = [];
+
+function salvarUser(){
+  let nomeUser = document.getElementById("nomeUser").value;
+
+  if(nomeUser){
+    dadosLista.push(nomeUser);
+    
+  }
+}
