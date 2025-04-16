@@ -36,8 +36,8 @@ function criaLista() {
     <tr>
       <td>${dadosLista[i]}</td>
       <td>
-        <button class='btn btn btn-warning'>Editar</button>
-        <button class='btn btn btn-danger'>Excluir</button>
+        <button class='btn btn btn-warning' onclick=''>Editar</button>
+        <button class='btn btn btn-danger' onclick='excluir(this.parentNode.parentNode.rowIndex)'>Excluir</button>
       </td>
     </tr>`;
     document.getElementById('tabela').innerHTML = tabela;
@@ -47,5 +47,6 @@ function criaLista() {
 //Função para excluir nome da lista
 function excluir(i) {
   dadosLista.splice((i-1), 1);
-  criaLista();
+  document.getElementById('tabela').deleteRow(i);
+  console.log(dadosLista);
 }
